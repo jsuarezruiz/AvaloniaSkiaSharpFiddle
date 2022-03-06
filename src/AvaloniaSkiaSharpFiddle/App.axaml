@@ -1,0 +1,40 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AvaloniaSkiaSharpFiddle.App"
+			 xmlns:converters="clr-namespace:AvaloniaSkiaSharpFiddle.Converters">
+    <Application.Styles>
+        <FluentTheme Mode="Light"/>
+		<StyleInclude Source="avares://AvaloniaEdit/AvaloniaEdit.xaml" />
+    </Application.Styles>
+	<Application.Resources>
+		<ResourceDictionary>
+
+			<converters:ModeToStatusBarTextConverter x:Key="ModeToStatusBarTextConverter" />
+
+			<SolidColorBrush x:Key="BackgroundBrush">#EEEEF2</SolidColorBrush>
+			<SolidColorBrush x:Key="BorderBrush">#CCCEDB</SolidColorBrush>
+			<SolidColorBrush x:Key="PaneBrush">#F5F5F5</SolidColorBrush>
+			<SolidColorBrush x:Key="AlternatePaneBrush">#F0F0F0</SolidColorBrush>
+			<SolidColorBrush x:Key="ReadyStatusBarBackgroundBrush">#007ACC</SolidColorBrush>
+			<SolidColorBrush x:Key="WorkingStatusBarBackgroundBrush">#0E639C</SolidColorBrush>
+			<SolidColorBrush x:Key="ErrorStatusBarBackgroundBrush">#CA5100</SolidColorBrush>
+			<SolidColorBrush x:Key="StatusBarForegroundBrush">#FFFFFF</SolidColorBrush>
+			<x:Double x:Key="SplitterSize">6</x:Double>
+			<Thickness x:Key="WindowPadding">6</Thickness>
+			<Thickness x:Key="BorderWidth">1</Thickness>
+			<Thickness x:Key="StatusBarMaximizedPadding">3,0</Thickness>
+			<Thickness x:Key="StatusBarNormalPadding">3,0,18,0</Thickness>
+
+			<Style x:Key="BorderStyle" Selector="Border">
+				<Setter Property="BorderThickness" Value="{StaticResource BorderWidth}" />
+				<Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+				<Setter Property="Background" Value="{StaticResource BackgroundBrush}" />
+			</Style>
+
+			<Style x:Key="SplitterStyle" Selector="GridSplitter">
+				<Setter Property="Background" Value="{StaticResource BackgroundBrush}" />
+			</Style>
+
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

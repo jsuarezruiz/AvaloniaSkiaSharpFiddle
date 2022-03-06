@@ -1,0 +1,147 @@
+<Window 
+	xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:avalonEdit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
+	xmlns:skia="clr-namespace:AvaloniaSkiaSharpFiddle.Controls;assembly=AvaloniaSkiaSharpFiddle.Base"
+    xmlns:viewmodel="clr-namespace:AvaloniaSkiaSharpFiddle.ViewModels;assembly=AvaloniaSkiaSharpFiddle.Base"
+	mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+    x:Class="AvaloniaSkiaSharpFiddle.MainWindow"
+    Title="Avalonia SkiaSharp Fiddle"
+	  Width="1024" Height="768" WindowStartupLocation="CenterScreen" >
+	<Window.DataContext>
+		<viewmodel:MainViewModel />
+	</Window.DataContext>
+	<DockPanel>
+		<Grid
+			DockPanel.Dock="Top"
+			Classes="ToolbarStyle">
+			<StackPanel
+				Orientation="Horizontal">
+				<Label
+					Content="Color: " />
+				<ComboBox
+					Width="100"
+                    SelectedItem="{Binding ColorCombination, Mode=TwoWay}"
+                    Items="{Binding ColorCombinations}">
+					<ComboBox.ItemTemplate>
+						<DataTemplate>
+							<TextBlock
+								Text="{Binding Name}" />
+						</DataTemplate>
+					</ComboBox.ItemTemplate>
+				</ComboBox>
+				<Separator />
+				<Label
+					Content="Width: " />
+				<TextBox
+					Text="{Binding DrawingWidth, Mode=TwoWay}"
+					Width="100" />
+				<Label
+					Content="Height: " />
+				<TextBox
+					Text="{Binding DrawingHeight, Mode=TwoWay}"
+					Width="100" />
+			</StackPanel>
+		</Grid>
+		<Grid
+			x:Name="statusbar"
+			DockPanel.Dock="Bottom"
+			Classes="StatusBarStyle">
+			<TextBlock
+				Text="{Binding Mode, Converter={StaticResource ModeToStatusBarTextConverter}}" />
+		</Grid>
+		<Grid Margin="{StaticResource WindowPadding}">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="100" />
+			</Grid.RowDefinitions>
+			<Grid
+				Grid.Row="0">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="2*" />
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+				<Border
+					Grid.Column="0"
+					Classes="BorderStyle">
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto" />
+							<RowDefinition Height="*" />
+						</Grid.RowDefinitions>
+						<Label
+							Content="Code" />
+						<avalonEdit:TextEditor
+							x:Name="editor"
+							Grid.Row="1"
+							ShowLineNumbers="True"
+                            HorizontalScrollBarVisibility="Auto"
+							VerticalScrollBarVisibility="Auto"
+							FontFamily="Consolas"
+							SyntaxHighlighting="C#">
+							<avalonEdit:TextEditor.Options>
+								<avalonEdit:TextEditorOptions
+									HighlightCurrentLine="True" />
+							</avalonEdit:TextEditor.Options>
+						</avalonEdit:TextEditor>
+					</Grid>
+				</Border>
+				<GridSplitter
+					Grid.Column="1"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Stretch"
+					Width="{StaticResource SplitterSize}"
+					Classes="SplitterStyle" />
+				<Border
+					Grid.Column="2"
+					Classes="BorderStyle">
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto" />
+							<RowDefinition Height="*" />
+						</Grid.RowDefinitions>
+						<Label
+							Content="Output" />
+						<skia:SkiaCanvas 
+							x:Name="preview" 
+							Grid.Row="1" />
+					</Grid>
+				</Border>
+			</Grid>
+			<GridSplitter
+				Grid.Row="1"
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Center"
+				Height="{StaticResource SplitterSize}"
+				Classes="SplitterStyle" />
+			<Border
+				Grid.Row="2"
+				Classes="BorderStyle">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<Label
+						Content="Messages" />
+					<ListBox
+						Items="{Binding CompilationMessages}"
+						BorderThickness="0"
+						Background="{StaticResource PaneBrush}"
+						Grid.Row="1">
+						<ListBox.ItemTemplate>
+							<DataTemplate>
+								<TextBlock
+									Text="{Binding DisplayMessage}"/>
+							</DataTemplate>
+						</ListBox.ItemTemplate>
+					</ListBox>
+				</Grid>
+			</Border>
+		</Grid>
+	</DockPanel>
+</Window>
