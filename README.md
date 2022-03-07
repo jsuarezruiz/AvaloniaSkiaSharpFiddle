@@ -7,6 +7,9 @@ Based on the fantastic [tool](https://github.com/mattleibow/SkiaSharpFiddle) cre
 
 ![Avalonia SkiaSharp Fiddle](images/avaloniaskiasharpfiddle.gif)
 
+WebAssembly
+![Avalonia SkiaSharp Fiddle Web](images/avaloniaskiasharpfiddle-web.png)
+
 ## Copyright and license
 
 Code released under the [MIT license](https://opensource.org/licenses/MIT).

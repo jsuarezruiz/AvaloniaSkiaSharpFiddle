@@ -1,13 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32126.315
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaloniaSkiaSharpFiddle.Base", "AvaloniaSkiaSharpFiddle\AvaloniaSkiaSharpFiddle.Base.csproj", "{08705B7D-68D8-4E73-8C6D-6A4B025BF4F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloniaSkiaSharpFiddle", "AvaloniaSkiaSharpFiddle\AvaloniaSkiaSharpFiddle.csproj", "{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaloniaSkiaSharpFiddle.Desktop", "AvaloniaSkiaSharpFiddle.Desktop\AvaloniaSkiaSharpFiddle.Desktop.csproj", "{7C54FFF2-698F-41F1-ADAA-206C18811995}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloniaSkiaSharpFiddle.NetCore", "AvaloniaSkiaSharpFiddle.NetCore\AvaloniaSkiaSharpFiddle.NetCore.csproj", "{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaloniaSkiaSharpFiddle.Web", "AvaloniaSkiaSharpFiddle.Web\AvaloniaSkiaSharpFiddle.Web.csproj", "{BAA87FD1-1363-43B1-8B14-551BAA6B8178}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloniaSkiaSharpFiddle.Web", "AvaloniaSkiaSharpFiddle.Web\AvaloniaSkiaSharpFiddle.Web.csproj", "{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,23 +12,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{08705B7D-68D8-4E73-8C6D-6A4B025BF4F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{08705B7D-68D8-4E73-8C6D-6A4B025BF4F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{08705B7D-68D8-4E73-8C6D-6A4B025BF4F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{08705B7D-68D8-4E73-8C6D-6A4B025BF4F9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7C54FFF2-698F-41F1-ADAA-206C18811995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7C54FFF2-698F-41F1-ADAA-206C18811995}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7C54FFF2-698F-41F1-ADAA-206C18811995}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7C54FFF2-698F-41F1-ADAA-206C18811995}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BAA87FD1-1363-43B1-8B14-551BAA6B8178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BAA87FD1-1363-43B1-8B14-551BAA6B8178}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BAA87FD1-1363-43B1-8B14-551BAA6B8178}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BAA87FD1-1363-43B1-8B14-551BAA6B8178}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {418A1169-9373-4642-91C5-A1237D1DACB9}
+		{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

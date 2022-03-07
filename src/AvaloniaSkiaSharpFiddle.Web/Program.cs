@@ -1,27 +1,29 @@
-using System;
+﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using AvaloniaSkiaSharpFiddle.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AvaloniaSkiaSharpFiddle.Web
+public class Program
 {
-    public class Program
+    public static async Task Main(string[] args)
     {
-        public static async Task Main(string[] args)
-        {
-            await CreateHostBuilder(args).Build().RunAsync();
-        }
+        await CreateHostBuilder(args).Build().RunAsync();
+    }
 
-        public static WebAssemblyHostBuilder CreateHostBuilder(string[] args)
-        {
-            var builder = WebAssemblyHostBuilder.CreateDefault(args);
+    public static WebAssemblyHostBuilder CreateHostBuilder(string[] args)
+    {
+        var builder = WebAssemblyHostBuilder.CreateDefault(args);
+            
+        builder.RootComponents.Add<App>("#app");
 
-            builder.RootComponents.Add<App>("#app");
+        builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-            builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
-            return builder;
-        }
+        return builder;
     }
 }
+
+
+
+

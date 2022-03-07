@@ -3,8 +3,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:38990",
-      "sslPort": 44358
+      "applicationUrl": "http://localhost:13961",
+      "sslPort": 44319
     }
   },
   "profiles": {
@@ -16,7 +16,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "AvaloniaSkiaSharpFiddle.Web": {
+    "AvaloniaBlazorSample": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

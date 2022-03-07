@@ -1,3 +1,4 @@
+﻿#nullable disable
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +28,7 @@ namespace AvaloniaSkiaSharpFiddle.ViewModels
 
         protected virtual bool SetProperty<T>(ref T storage, T value, Action onChanged, [CallerMemberName] string propertyName = null)
         {
-            if (EqualityComparer<T>.Default.Equals(storage, value)) 
+            if (EqualityComparer<T>.Default.Equals(storage, value))
                 return false;
 
             storage = value;

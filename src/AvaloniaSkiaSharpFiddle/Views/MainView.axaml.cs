@@ -1,7 +1,5 @@
 #nullable disable
-using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using Avalonia.Threading;
 using AvaloniaEdit;
@@ -16,14 +14,11 @@ using System.Threading.Tasks;
 
 namespace AvaloniaSkiaSharpFiddle
 {
-    public partial class MainWindow : Window
+    public partial class MainView : UserControl
     {
-        public MainWindow()
+        public MainView()
         {
             InitializeComponent();
-#if DEBUG
-            this.AttachDevTools();
-#endif
 
             var editor = this.FindControl<TextEditor>("editor");
 
@@ -51,11 +46,6 @@ namespace AvaloniaSkiaSharpFiddle
         }
 
         public MainViewModel ViewModel => DataContext as MainViewModel;
-
-        void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
 
         async Task LoadInitialSourceAsync()
         {

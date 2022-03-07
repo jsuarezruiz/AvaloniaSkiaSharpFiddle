@@ -1,11 +1,18 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:AvaloniaSkiaSharpFiddle"
              x:Class="AvaloniaSkiaSharpFiddle.App"
 			 xmlns:converters="clr-namespace:AvaloniaSkiaSharpFiddle.Converters">
+    
+	<Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+
     <Application.Styles>
         <FluentTheme Mode="Light"/>
 		<StyleInclude Source="avares://AvaloniaEdit/AvaloniaEdit.xaml" />
     </Application.Styles>
+
 	<Application.Resources>
 		<ResourceDictionary>
 
@@ -37,4 +44,5 @@
 
 		</ResourceDictionary>
 	</Application.Resources>
+
 </Application>

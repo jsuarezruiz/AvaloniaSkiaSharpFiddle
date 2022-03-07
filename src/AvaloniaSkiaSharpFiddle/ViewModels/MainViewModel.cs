@@ -1,4 +1,5 @@
-﻿using System;
+﻿#nullable disable
+using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
@@ -65,7 +66,7 @@ namespace AvaloniaSkiaSharpFiddle.ViewModels
 
         public string SourceCode
         {
-            get => sourceCode; 
+            get => sourceCode;
             set => SetProperty(ref sourceCode, value, onChanged: OnSourceCodeChanged);
         }
 
@@ -143,7 +144,9 @@ namespace AvaloniaSkiaSharpFiddle.ViewModels
         void GenerateDrawings()
         {
             GenerateRasterDrawing();
-            GenerateGpuDrawing();
+            GenerateGpuDrawing(); 
+            
+            OnPropertyChanged(nameof(GpuDrawing));
         }
 
         void GenerateRasterDrawing()
@@ -171,8 +174,8 @@ namespace AvaloniaSkiaSharpFiddle.ViewModels
 
             if (messages?.Any() == true)
             {
-                foreach(var message in messages)
-                CompilationMessages.Add(message);
+                foreach (var message in messages)
+                    CompilationMessages.Add(message);
             }
         }
     }
